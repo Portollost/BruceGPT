@@ -1,0 +1,295 @@
+Este texto abrange todas as informações essenciais para a criação de listas de recomendações visando mitigar incidentes de segurança. Nele, você terá acesso ao modelo a ser seguido na elaboração das listas de recomendações, bem como todas as recomendações relevantes a serem aplicadas de acordo com o contexto específico do incidente. Para criar as recomendações, é crucial realizar uma análise aprofundada do tipo de incidente em questão e, em seguida, preencher o modelo com as recomendações pertinentes, de forma a abordar todas as lacunas de segurança de maneira eficaz.
+
+A elaboração da lista de recomendações segue um processo estruturado, que começa pela análise do contexto do incidente. Com base no tipo de incidente ocorrido, é necessário selecionar as recomendações mais apropriadas a partir das opções fornecidas. Estas recomendações estão categorizadas por meio de um identificador de recomendação (ID) e uma descrição do incidente correspondente. Cada recomendação deve ser inserida no local apropriado do modelo padrão, logo abaixo do tópico ao qual se relaciona.
+
+Após a minuciosa seleção das recomendações, é crucial apresentar um resumo conciso e esclarecedor imediatamente acima da lista. Esse resumo deve adotar uma abordagem passo a passo, detalhando cada tópico da lista de forma clara e sistemática. Essa estratégia visa proporcionar uma compreensão aprofundada e facilitar a absorção sequencial das informações contidas na lista subsequente.
+
+Exemplo de uma recomendação: RA2001: Listar vítimas de alerta de segurança
+
+A lista deve seguir obrigatoriamente o seguinte modelo:
+
+{
+As recomendações abaixo foram baseadas nos frameworks RE&CT (https://atc-project.github.io/react-navigator/) e D3FEND (https://d3fend.mitre.org/).
+
+<Inserir resumo da lista aqui>
+
+(1) <Inserir Título do tópico da recomendação>:
+<Inserir recomendações do tópico aqui>
+
+(2) <Inserir Título do tópico da recomendação>:
+<Inserir recomendações do tópico aqui>
+
+(3) <Inserir Título do tópico da recomendação>:
+<Inserir recomendações do tópico aqui>
+
+(4) <Inserir Título do tópico da recomendação>:
+<Inserir recomendações do tópico aqui>
+}
+
+Utilize apenas as seguintes recomendações para inserir no modelo da lista:
+
+Identificação:
+RA2001: Listar vítimas de alerta de segurança
+RA2002: Listar vulnerabilidades do host
+RA2003: Colocar contas comprometidas em monitoramento
+RA2101: Listar hosts que se comunicaram com o domínio interno
+RA2102: Listar hosts que se comunicaram com o IP interno
+RA2103: Listar hosts que se comunicaram com a URL interna
+RA2104: Analisar nome de domínio
+RA2105: Analisar IP
+RA2106: Analisar URI
+RA2107: Listar hosts que se comunicaram por porta
+RA2108: Listar hosts conectados à VPN
+RA2109: Listar hosts conectados à intranet
+RA2110: Listar dados transferidos
+RA2111: Coletar dados transferidos
+RA2112: Identificar dados transferidos
+RA2113: Listar hosts que se comunicaram com o domínio externo
+RA2114: Listar hosts que se comunicaram com o IP externo
+RA2115: Listar hosts que se comunicaram com a URL externa
+RA2116: Encontrar dados transferidos pelo padrão de conteúdo
+RA2117: Analisar user-agent
+RA2118: Listar regras do firewall
+RA2201: Listar usuários que abriram mensagem de email
+RA2202: Coletar mensagem de email
+RA2203: Listar destinatários de mensagens de email
+RA2204: Certificar-se de que a mensagem de email é de phishing
+RA2205: Extrair observáveis da mensagem de email
+RA2206: Analisar endereço de email
+RA2301: Listar arquivos criados
+RA2302: Listar arquivos modificados
+RA2303: Listar arquivos excluídos
+RA2304: Listar arquivos baixados
+RA2305: Listar arquivos com carimbos de data/hora adulterados
+RA2306: Encontrar arquivo por caminho
+RA2307: Encontrar arquivo por metadados
+RA2308: Encontrar arquivo por hash
+RA2309: Encontrar arquivo por formato
+RA2310: Encontrar arquivo por padrão de conteúdo
+RA2311: Coletar arquivo
+RA2312: Analisar hash de arquivo
+RA2313: Analisar Windows PE
+RA2314: Analisar macos macho
+RA2315: Analisar Unix ELF
+RA2316: Analisar arquivo do MS Office
+RA2317: Analisar arquivo PDF
+RA2318: Analisar script
+RA2319: Analisar JAR
+RA2320: Analisar nome do arquivo
+RA2401: Listar processos executados
+RA2402: Encontrar processo pelo caminho do executável
+RA2403: Encontrar processo por metadados do executável
+RA2404: Encontrar processo pelo hash do executável
+RA2405: Encontrar processo pelo formato do executável
+RA2406: Encontrar processo pelo padrão de conteúdo do executável
+RA2501: Listar chaves de registro modificadas
+RA2502: Listar chaves de registro excluídas
+RA2503: Listar chaves de registro acessadas
+RA2504: Listar chaves de registro criadas
+RA2505: Listar serviços criados
+RA2506: Listar serviços modificados
+RA2507: Listar serviços excluídos
+RA2508: Analisar chave de registro
+RA2601: Listar usuários autenticados
+RA2602: Listar contas de usuário
+D3-DA: Executar ou abrir o arquivo em um ambiente de "sandbox" sintético para determinar se o arquivo é um programa malicioso.
+D3-HD: Analisar strings para determinar se a string do comando é maliciosa.
+D3-SMRA: Caracterizar a reputação dos agentes de transferência de correio (MTA) para determinar o risco de segurança em emails.
+D3-ANAA: Detecção do uso não autorizado de protocolos de rede administrativos por meio da análise da atividade de rede em relação a uma linha de base.
+D3-FBA: Análise do comportamento de código embutido em firmware e busca de comportamento anômalo e atividade suspeita.
+D3-DQSA: Análise de consultas de banco de dados para detectar Injeção SQL.
+D3-ANET: Coleta de eventos de autenticação, criação de um perfil de usuário de referência e determinação se os eventos de autenticação estão em conformidade com o perfil de referência.
+
+Contenção:
+RA3001: Aplicar correção de vulnerabilidade
+RA3101: Bloquear endereço IP externo
+RA3102: Bloquear endereço IP interno
+RA3103: Bloquear domínio externo
+RA3104: Bloquear domínio interno
+RA3105: Bloquear URL externa
+RA3106: Bloquear URL interna
+RA3107: Bloquear comunicação externa por porta
+RA3108: Bloquear comunicação interna por porta
+RA3109: Bloquear comunicação externa do usuário
+RA3110: Bloquear comunicação interna do usuário
+RA3111: Bloquear transferência de dados pelo padrão de conteúdo
+RA3201: Bloquear domínio em email
+RA3202: Bloquear remetente em email
+RA3203: Isolar mensagem de email
+RA3301: Isolar arquivo por formato
+RA3302: Isolar arquivo por hash
+RA3303: Isolar arquivo por caminho
+RA3304: Isolar arquivo pelo padrão de conteúdo
+RA3401: Bloquear processo pelo caminho do executável
+RA3402: Bloquear processo por metadados do executável
+RA3403: Bloquear processo pelo hash do executável
+RA3404: Bloquear processo pelo formato do executável
+RA3405: Bloquear processo pelo padrão de conteúdo do executável
+RA3501: Desativar serviço do sistema
+RA3601: Bloquear conta de usuário
+D3-EAL: Utilizar uma assinatura digital para autenticar um arquivo antes de abri-lo.
+D3-BDI: Isolamento de transmissão para restringir o número de computadores com os quais um host pode se comunicar em sua rede local (LAN).
+​​​​​​​
+Erradicação:
+RA4001: Relatar incidente para empresas externas
+RA4101: Remover dispositivo de rede não autorizado
+RA4201: Excluir mensagem de email
+RA4301: Remover arquivo
+RA4501: Remover chave de registro
+RA4502: Remover serviço
+RA4601: Revogar credenciais de autenticação
+RA4602: Remover conta de usuário
+D3-AL: Desativar temporariamente contas de usuário em um sistema ou domínio.
+D3-FEV: Deleção de arquivos removem arquivos do armazenamento do sistema.
+D3-PS: Suspensão de um processo em execução em um sistema de computador.
+
+Recuperação:
+RA5001: Reinstalar host a partir da imagem dourada
+RA5002: Restaurar dados a partir do backup
+RA5101: Desbloquear IP bloqueado
+RA5102: Desbloquear domínio bloqueado
+RA5103: Desbloquear URL bloqueada
+RA5104: Desbloquear porta bloqueada
+RA5105: Desbloquear usuário bloqueado
+RA5201: Desbloquear domínio em email
+RA5202: Desbloquear remetente em email
+RA5203: Restaurar mensagem de email em quarentena
+RA5301: Restaurar arquivo em quarentena
+RA5401: Desbloquear processo bloquead
+RA5501: Habilitar serviço desativado
+RA5601: Desbloquear conta de usuário bloqueada
+
+Hardening:
+D3-BA: Implementar autenticação criptográfica antes da inicialização do sistema.
+D3-MAN: Implementar autenticação do remetente de uma mensagem e garantindo a integridade da mensagem.
+D3-ACH: Modificar a configuração de um aplicativo para reduzir sua superfície de ataque
+D3-MFA: Implementar uma política de uso obrigatório de MFA para todos os colaboradores
+D3-SPP: Implementar uma política de troca de senhas e uso de senhas fortes
+D3-BAN: Utilizar medidas biológicas para autenticar um usuário.
+RA6002: Realizar exercício de lições aprendidas
+
+Exemplos de listas de recomendações:
+
+Exemplo de lista de recomendações para mitigar incidentes de segurança relacionados à Falhas de login e falhas de autenticação:
+As recomendações abaixo foram baseadas nos frameworks RE&CT (https://atc-project.github.io/react-navigator/) e D3FEND (https://d3fend.mitre.org/).
+
+(1) Identificação:
+RA2101 e RA2102 - Listar hosts que se comunicaram com o AD e com o host suspeito;
+
+(2) Contenção:
+RA3101 e RA3102 - Realizar o bloqueio do host suspeito externo/interno;
+RA3110 - Bloquear a comunicação interna do host (Isolamento);
+RA3601 - Bloquear o usuário suspeito.
+D3-ANCI - Trocar as senhas das Contas Afetadas e encerrar todas as sessões; 
+​​​​​​​
+(3) Erradicação:
+RA4502 - Remover processos suspeitos relacionados a tentativa de autenticação;
+RA4601 e RA4602 - Revogar as credenciais de acessos e/ou remover a conta.
+
+(4) Hardening:
+D3-MFA - Implementar uma política de uso obrigatório de MFA para todos os colaboradores;
+D3-SPP - Implementar uma política de troca de senhas e uso de senhas fortes;
+
+Exemplo de lista de recomendações para mitigar incidentes de segurança relacionados à Processos suspeitos:
+As recomendações abaixo foram baseadas no framework RE&CT (https://atc-project.github.io/react-navigator/).
+
+(1) Identificação:
+RA2401 - Procedimentos relacionados à listagem dos processos que foram executados.
+RA2402 / RA2404 / RA2406 - Procedimentos relacionados à listagem dos processos, através do caminho do executável, pela hash ou pelo padrão do conteúdo executável, respectivamente.
+
+(2) Contenção: 
+RA3401 / RA3403 / RA3405 - Bloquear o processo através do caminho, hash ou padrão do executável.
+
+(3) Recuperação:
+RA5401 - Desbloquear o processo bloqueado.
+
+Exemplo de lista de recomendações para mitigar incidentes de segurança relacionados à Malware:
+As recomendações abaixo foram baseadas no framework RE&CT (https://atc-project.github.io/react-navigator/).
+
+(1) Identificação:
+RA2003 - Monitoramento de usuários/hosts comprometidos.
+RA2201 a RA2206 - Procedimentos relacionados à identificação e análise de possíveis emails de phishing, de forma que seja possível compreender a origem da ameaça.
+
+(2) Contenção:
+RA3110 - Bloquear a comunicação interna do host (Isolamento).
+RA3302 - Quarentenar o arquivo por hash.
+
+(3) Erradicação:
+RA4301 - Deletar o arquivo.
+
+Exemplo de lista de recomendações para mitigar incidentes de segurança relacionados à Comunicações suspeitas em Firewall:
+As recomendações abaixo foram baseadas no framework RE&CT (https://atc-project.github.io/react-navigator/).
+
+(1) Identificação:
+RA2101 e RA2102 - Procedimentos relacionados à listagem de hosts que realizaram comunicação com domínios e IPs internos.
+RA2123 e RA2114 - Procedimentos relacionados à listagem de hosts que realizaram comunicação com domínios e IPs externos.
+
+(2) Contenção:                                                                                                                                                                                                                        
+RA3110 - Bloquear a comunicação interna do host (Isolamento).
+RA3101 - Bloquear IP externo.
+
+RA3102 - Bloquear IP interno.
+
+(3) Lições Aprendidas:
+RA6002 - Conduzir processos de conscientização e lições aprendidas, para evitar incidentes causados por erro humano.
+
+Exemplo de lista de recomendações para mitigar incidentes de segurança relacionados à troca de senha realizada por usuário:
+As recomendações abaixo foram baseadas nos frameworks RE&CT (https://atc-project.github.io/react-navigator/) e D3FEND (https://d3fend.mitre.org/).
+
+(1) Contenção:                                                                                                                                                                                                                  
+RA3601 - Bloquear o usuário suspeito.
+
+(2) Erradicação:
+RA4601 e RA4602 - Revogar as credenciais de acessos e/ou remover a conta.
+
+Exemplo de lista de recomendações para mitigar incidentes de segurança relacionados à exploração de vulnerabilidades:
+As recomendações abaixo foram baseadas nos frameworks RE&CT (https://atc-project.github.io/react-navigator/) e D3FEND (https://d3fend.mitre.org/).
+
+(1) Contenção:                                                                                                                                                                                                                       
+RA3001 - Aplicar o patch de vulnerabilidade ao ativo.
+RA2003 - Monitoramento de usuários/hosts comprometidos.
+RA3501 - Desabilitar serviços do sistema.
+RA3101 - Bloquear IP externo.
+
+(2) Erradicação:
+RA4101 - Remover dispositivos em rede não reconhecidos.
+RA3110 - Bloquear a comunicação interna do host (Isolamento)
+
+(3) Recuperação:
+RA5501 - Habilitar serviços desabilitados.
+
+Exemplo de lista de recomendações para mitigar incidentes de segurança relacionados à Acessos aos CPFs VIPs:
+As recomendações abaixo foram baseadas nos frameworks RE&CT (https://atc-project.github.io/react-navigator/) e D3FEND (https://d3fend.mitre.org/).
+
+(1) Identificação:
+RA2003 - Monitoramento de usuários comprometidos.
+
+(2) Contenção:                                                                                                                                                                                                                        
+RA3101 - Realizar o bloqueio do host suspeito;
+
+(3) Erradicação:
+RA4601 e RA4602 - Revogar as credenciais de acessos e/ou remover a conta.
+
+Exemplo de lista de recomendações para mitigar incidentes de segurança relacionados à usuários habilitados, criados ou adicionados:
+As recomendações abaixo foram baseadas nos frameworks RE&CT (https://atc-project.github.io/react-navigator/) e D3FEND (https://d3fend.mitre.org/).
+
+(1) Contenção:                                                                                                                                                                                                                        
+RA3101 e RA3101 - Realizar o bloqueio do host suspeito;
+RA3601 - Bloquear o usuário suspeito.
+
+(2) Erradicação:
+RA4601 e RA4602 - Revogar as credenciais de acessos e/ou remover a conta.
+
+Exemplo de lista de recomendações para mitigar incidentes de segurança relacionados à comunicação suspeita com transferência de arquivo:
+As recomendações abaixo foram baseadas nos frameworks RE&CT (https://atc-project.github.io/react-navigator/) e D3FEND (https://d3fend.mitre.org/).
+
+(1) Identificação:
+RA2110 - Listar dados transferidos
+
+(2) Contenção:                                                                                                                                                                                                                        
+RA3110 - Bloquear a comunicação interna do host (Isolamento).
+​​​​​​​RA3101 - Bloquear IP externo.
+RA3102 - Bloquear IP interno.
+RA3111 - Bloquear transferência de dados por padrão de conteúdo
+RA3108 - Bloquear comunicação interna da porta
+
